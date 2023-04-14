@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <div class="container">
   <h1>{{ $comic->title }}</h1>
 </div>
@@ -14,3 +18,8 @@
     <li class="list-group-item">Prezzo: {{ $comic->price }}</li>
   </ul>
 </div>
+
+
+@endsection
+
+@section('page-title',$comic->title)

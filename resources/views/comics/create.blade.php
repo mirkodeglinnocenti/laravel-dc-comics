@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <div class="conatiner">
     <h1>Nuovo Fumetto</h1>
   </div>
@@ -7,4 +11,8 @@
         campi input
     </form>
   </div>
-    
+</div>
+
+@endsection
+
+@section('page-title','Aggiunta fumetti')
