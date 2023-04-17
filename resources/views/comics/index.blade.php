@@ -40,6 +40,11 @@
             <td>{{ $comic->series }}</td>
             <td>{{ $comic->price }}</td>
             <td>{{ $comic->id }}</td>
+            <td>
+              <a class="btn btn-primary" href="{{ route('comics.edit', $comic) }}">
+                Modifica Fumetto
+              </a>
+            </td>
           </tr>
 
         @endforeach
