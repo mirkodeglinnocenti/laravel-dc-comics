@@ -72,4 +72,16 @@ class ComicController extends Controller
         return to_route('comics.show', $comic);
     }
 
+    public function delete(Comic $comic)
+    {
+        return view('comics.delete', compact('comic'));
+    }
+
+    public function destroy(Comic $comic)
+    {
+        $comic->delete();
+
+        return to_route('comics.index');
+    }
+
 }

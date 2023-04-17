@@ -6,7 +6,7 @@
 
   <div class="container">
   <div class="row">
-      <div class="col-auto ms-auto">
+      <div class="col-auto ms-auto py-4">
         <a class="btn btn-primary" href="{{ route('comics.create') }}">
           Aggiungi Fumetto
         </a>
@@ -25,6 +25,7 @@
           <th>serie</th>
           <th>prezzo</th>
           <th>id</th>
+          <th>funzionalità</th>
         </tr>
       </thead>
 
@@ -40,9 +41,12 @@
             <td>{{ $comic->series }}</td>
             <td>{{ $comic->price }}</td>
             <td>{{ $comic->id }}</td>
-            <td>
-              <a class="btn btn-primary" href="{{ route('comics.edit', $comic) }}">
+            <td class="d-flex gap-3">
+              <a class="btn btn-primary btn-sm" href="{{ route('comics.edit', $comic) }}">
                 Modifica Fumetto
+              </a>
+              <a class="btn btn-danger btn-sm" href="{{ route('comics.delete', $comic) }}">
+                Elimina Fumetto
               </a>
             </td>
           </tr>
