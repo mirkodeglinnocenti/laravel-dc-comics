@@ -22,13 +22,6 @@
     </div>
 
     <div class="mb-3">
-      <label for="description" class="form-label">Descrizione</label>
-      <textarea name="description" id="description" cols="30" rows="2">
-          {{ $comic->description }}
-      </textarea>
-    </div>
-
-    <div class="mb-3">
       <label for="thumb" class="form-label">Immagine</label>
       <input type="text" class="form-control" id="thumb" name="thumb" value="{{ $comic->thumb }}">
     </div>
@@ -51,6 +44,13 @@
     <div class="mb-3">
       <label for="type" class="form-label">Tipo</label>
       <input type="text" class="form-control" id="type" name="type" value="{{ $comic->type }}">
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Descrizione</label>
+      <textarea name="description" id="description" cols="30" rows="2">
+          {{ $comic->description }}
+      </textarea>
     </div>
 
     <button type="submit">Aggiorna fumetto</button>
